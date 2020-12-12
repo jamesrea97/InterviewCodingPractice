@@ -1,2 +1,4 @@
 # InterviewCodingPractice
-Coding interview practice taken from https://www.softwaretestinghelp.com/coding-interview-questions/
+Coding interview practice taken from various sources
+
+
