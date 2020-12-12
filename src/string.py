@@ -1,6 +1,14 @@
-''' Module contains solution to classic Coding Interview Questions '''
+''' Module contains questions and solutions to classic
+    string related Coding Interview Questions 
+'''
 
-# Question 1: How can you reverse a string
+# Table of contents
+# Q1: How can you reverse a string
+# Q2: Determine if a string is a palindrome
+# Q3: Determine instances of character in a given string
+
+
+# Question : How can you reverse a string
 def reverse_string(s):
     """ Returns reverse of string """
     # Asymptotic Time Complexity: O(n)
@@ -22,8 +30,11 @@ def palindrome(s):
 
 
 # Question 3: Determine instances of character in a given string 
-def character_instances(s, c):
-    """ Returns counr of character instances in string """
+def character_instances_1(s, c):
+    """ Returns counr of character instances in string 
+        Note: This pattern can be used for general character count
+        and is not Optimal
+    """
     # Asymptotic Time Complexity: O(n)
     # Auxillary Space Complexity: O(n) - due to dictionary
 
@@ -35,8 +46,24 @@ def character_instances(s, c):
         else:
             character_counter[i] = 1
     return character_counter.get(c, 0)
+
+def character_instances_2(s, c):
+    """ Returns counr of character instances in string 
+        Note: Optimal
+    """
+    # Asymptotic Time Complexity: O(n)
+    # Auxillary Space Complexity: O(1)
+
+    counter = 0
     
-# Question 4: 'Move Zeros to Left' - curtorsy of Facebook
+    for char in s:
+        if char == c:
+            counter += 1
+    
+    return counter
+
+    
+# Question 1: 'Move Zeros to Left' - curtorsy of Facebook
 '''
 Given an integer array, move all 0s to the 
 left while maintaning order of other elements
