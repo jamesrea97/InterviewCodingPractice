@@ -2,6 +2,7 @@
 
 import array
 import string
+import structures
 
 if __name__ == "__main__":
-    print(array.move_zeroes_3([1,10,20,0,59,63,0,88,0]))
+    structures.linked_list_driver()
