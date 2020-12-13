@@ -4,9 +4,9 @@
 # Table of contents
 # 1. Insertion Sort
 # 2. Selection Sort
-# 3. Merge Sort
-# 4. QuickSort
-# 5. TODO Heap Sort
+# 3. Merge Sort TODO
+# 4. QuickSort TODO
+# 5. Heap Sort TODO
 # 6. Bubble Sort
 
 
@@ -22,12 +22,12 @@ def insertion_sort(arr):
 
     while i < len(arr):
         j = i
-        if j - 1 >= 0:
-            while arr[j] < arr[j- 1]:
+        while arr[j] > arr[j- 1]:
                 t = arr[j]
                 arr[j] = arr[j-1]
                 arr[j-1] = t
-                j-= 1
+                if j - 1 >= 0:
+                    j-= 1
         i += 1
     
     return arr
@@ -52,3 +52,5 @@ def selection_sort(arr):
     
     return arr
 
+
+# 3 
