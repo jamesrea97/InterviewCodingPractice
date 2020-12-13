@@ -1,7 +1,7 @@
 ''' Module contains classic sorting algorithms
 '''
 
-# Table of contents
+###### Table of contents ######
 # 1. Insertion Sort
 # 2. Selection Sort
 # 3. Merge Sort TODO

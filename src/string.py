@@ -2,7 +2,7 @@
     string related Coding Interview Questions 
 '''
 
-# Table of contents
+###### Table of contents ###### 
 # Q1: How can you reverse a string
 # Q2: Determine if a string is a palindrome
 # Q3: Determine instances of character in a given string

@@ -2,8 +2,8 @@
     array-of-int related Coding Interview Questions 
 '''
 
-# Table of contents
-# Q1: 'Move Zeros to Left'
+###### Table of contents ######
+#  Q1: 'Move Zeros to Left'
 # Q2: How to find the missing number in a given array of 1 to n
 
 

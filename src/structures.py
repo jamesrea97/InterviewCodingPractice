@@ -2,12 +2,13 @@
     data structure related Coding Interview Questions 
 '''
 
-# Table of contents
+###### Table of contents ######
+### Linked List ###
 # Q1: Reverse Linked List
+# Q2: Find middle element of a Linked List (in single pass)
 
 
-
-# Question 1: Can you reverse a LinkedList (defined below)
+### Linked Lists ###
 class Node:
     def __init__(self, data):
         self.data = data
@@ -35,9 +36,11 @@ class LinkedList:
             current = current.next
         return result
 
-    ''' Solution in reverse() method '''
 
+    # Question 1a: Can you reverse a LinkedList (defined below)
     def reverse(self):
+        ''' Reverses Linked List iteratively '''
+
         current_node = self.head
         previous_node = None
 
@@ -57,10 +60,82 @@ class LinkedList:
         current_node.next = previous_node
         self.head = current_node
 
+    # Question 1b: Can you reverse a LinkedList (defined below)
+    def reverse_recursive(self):
+        ''' Reverses Linked List recursively '''
+        previous = None
+        current = self.head
+        def reverse(self, previous_node, current_node):
+            if current_node.next is None:
+                current_node.next = previous_node
+                self.head = current_node
+                return 
+            else:
+                t = current_node.next
+                current_node.next = previous_node
+                previous_node = current_node
+                current_node = t
+                reverse(self, previous_node, current_node)
+
+        reverse(self, previous, current)
+
+
+    # Q2: Find middle element of a Linked List (in single pass)
+    def middle_element(self):
+        ''' Finds middle element of Linked List '''
         
+        one_step = self.head
+        two_step = self.head
+    
+        # Edge case
+        if one_step is None:
+            return
+            
+        counter = 0
+
+        while two_step is not None:
+            two_step = two_step.next
+            
+            counter += 1
+
+            if counter % 2 == 0:
+                one_step = one_step.next
+        
+        return one_step.data
 
 
-def linked_list_driver():
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def linked_list_reverse_driver(recursive = False):
     ll_edge_case = LinkedList()
     
     ll = LinkedList()
@@ -71,9 +146,25 @@ def linked_list_driver():
 
     
     print('Forward Linked List 1: ' + ll.display())
-    ll.reverse()
+    ll.reverse_recursive() if recursive else ll.reverse()
     print('Backward Linked List 1: ' + ll.display())
 
     print('\nForward Linked List 2:' + ll_edge_case.display())
-    ll_edge_case.reverse()
+    ll_edge_case.reverse()if recursive else ll_edge_case.reverse()
     print('Backward Linked List 2: ' + ll_edge_case.display())
+
+
+def linked_list_middle_element_driver():
+    ll_edge_case = LinkedList()
+    
+    ll = LinkedList()
+    ll.append(7)
+    ll.append(1)
+    ll.append(30)
+    ll.append(4)
+
+    print('Linked List:' + ll.display())
+    print('Middle element of Linked List: ' + str(ll.middle_element()))
+
+    print('Linked List:' + ll_edge_case.display())
+    print('Middle element of Linked List: ' + str(ll_edge_case.middle_element()))

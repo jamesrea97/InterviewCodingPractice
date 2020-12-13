@@ -6,4 +6,4 @@ import structures
 import sorting
 
 if __name__ == "__main__":
-    print(sorting.insertion_sort([1, -1, 3, 0, 5]))
+    structures.linked_list_reverse_driver(True)
