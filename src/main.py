@@ -42,7 +42,27 @@ def linked_list_middle_element_driver():
     print('Middle element of Linked List: ' + str(ll_edge_case.middle_element()))
 
 
+
+
+
+def reverse_binary_search_tree():
+    bst = structures.BinarySearchTree(8)
+
+    bst.add_element(3)
+    bst.add_element(9)
+    bst.add_element(-1)
+    bst.add_element(4)
+
+    print('Initial BST: ')
+    bst.display()
+
+    bst.reverse()
+
+    print('Reversed BST:')
+    bst.display()
+
+    
 if __name__ == "__main__":
-    linked_list_reverse_driver(True)
+    reverse_binary_search_tree()
 
 
