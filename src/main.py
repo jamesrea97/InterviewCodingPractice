@@ -3,6 +3,7 @@
 import array
 import string
 import structures
+import sorting
 
 if __name__ == "__main__":
-    structures.linked_list_driver()
+    print(sorting.insertion_sort([1, -1, 3, 0, 5]))

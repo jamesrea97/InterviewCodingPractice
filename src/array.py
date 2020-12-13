@@ -4,8 +4,13 @@
 
 # Table of contents
 # Q1: 'Move Zeros to Left'
+# Q2: How to find the missing number in a given array of 1 to n
 
-# Question 1: 'Move Zeros to Left' - curtorsy of Facebook
+
+
+
+
+# Q1: 'Move Zeros to Left' - curtorsy of Facebook
 '''
 Given an integer array, move all 0s to the 
 left while maintaning order of other elements
@@ -74,3 +79,60 @@ def move_zeroes_3(arr):
     return arr
 
 
+# Question 2: How to find the missing number in a given array of 1 to n
+'''
+Given an integer array with numbers 1 to n, find the missing number (changed to a zero)
+'''
+def missing_number(arr):
+    """" Returns missing element 
+        Note: Optimal
+    """
+    # Asymptotic Time Complexity: O(n)
+    # Auxillary Space Complexity: O(1)
+
+    sum_array = 0
+    sum_total = 0
+    for i in range(len(arr)):
+        sum_array+= arr[i]
+        sum_total += (i + 1)
+
+    return sum_total - sum_array
+    
+# Question 3: How to find the minimum and maximum in an array
+def find_min_max(arr):
+    """" Returns min and max of array
+        Note: Optimal
+    """
+    # Asymptotic Time Complexity: O(n)
+    # Auxillary Space Complexity: O(1)
+
+    min_index = 0
+    max_index = 0
+
+    for i in range(len(arr)):
+        if arr[i] > arr[max_index]:
+            max_index = i
+        if arr[i] < arr[min_index]:
+            min_index = i
+    
+    return arr[min_index], arr[max_index]
+
+
+# Question 4: How to find the pair of integers that sum up to a a value
+def find_pair_sum(arr, s):
+    """" Returns a pair of integers that sum to s; None otherwise
+        Note: higher space complexity traded for lower time complexity
+    """
+    # Asymptotic Time Complexity: O(n)
+    # Auxillary Space Complexity: O(n)
+
+    sum_map = {}
+
+    for i in range(len(arr)):
+        if s-arr[i] in sum_map:
+            return s-arr[i], arr[i]
+        else:
+            sum_map[s-arr[i]] = 0
+            sum_map[arr[i]] = 0
+    
+    return None
