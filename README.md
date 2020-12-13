@@ -26,7 +26,13 @@ language agnostic as possible.
 ## Data Structures Discussion
 
 In this section, diagrams explaining the idea behind each data structure is
-presented. Additional comments on certain implementations are also provided.
+presented.
+
+### Linked List
+
+### Binary Search Tree
+
+### Binary (Max) Heap
 
 ## Sorting Algorithm Discussion
 
