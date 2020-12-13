@@ -29,13 +29,20 @@ In this section, diagrams explaining the idea behind each data structure is
 presented.
 
 ### Linked List
-![alt text](https://user-images.githubusercontent.com/59763234/102012419-71bcb980-3d4a-11eb-93be-12503bda9c81.png)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/59763234/102012419-71bcb980-3d4a-11eb-93be-12503bda9c81.png"  width="500"/>
+</p>
 
 ### Binary Search Tree
-![alt text](https://user-images.githubusercontent.com/59763234/102012422-75e8d700-3d4a-11eb-85bd-f3867ac95b62.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/59763234/102012422-75e8d700-3d4a-11eb-85bd-f3867ac95b62.png"  width="500"/>
+</p>
 
 ### Binary (Max) Heap
-![alt text](https://user-images.githubusercontent.com/59763234/102012420-73867d00-3d4a-11eb-88c5-0068fafd8e80.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/59763234/102012420-73867d00-3d4a-11eb-88c5-0068fafd8e80.png" width="500"/>
+</p>
 
 ## Sorting Algorithm Discussion
 
