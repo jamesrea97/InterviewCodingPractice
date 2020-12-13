@@ -5,7 +5,7 @@ Module contains classic sorting algorithms
 ###### Table of contents ######
 # 1. Insertion Sort
 # 2. Selection Sort
-# 3. Merge Sort TODO
+# 3. Merge Sort 
 # 4. QuickSort TODO
 # 5. Heap Sort TODO
 # 6. Bubble Sort
@@ -14,7 +14,7 @@ Module contains classic sorting algorithms
 # 1. Insertion Sort
 def insertion_sort(arr):
     ''' Returns sorted arr '''
-    # Asymptotic Time Complexity: O(n^2)
+    # Asymptotic Time Complexity: Best O(N) [Sorted] Worst O(n^2) [Unsorted] 
     # Auxillary Space Complexity: O(1)
 
     # Idea: Build array up, inserting the elements in the right places
@@ -37,7 +37,7 @@ def insertion_sort(arr):
 # 2. Selection Sort
 def selection_sort(arr):
     ''' Returns sorted arr '''
-    # Asymptotic Time Complexity: O(n^2)
+    # Asymptotic Time Complexity: Always O(n^2)
     # Auxillary Space Complexity: O(1)
 
     # Idea: Select location of element and swap
@@ -54,4 +54,53 @@ def selection_sort(arr):
     return arr
 
 
-# 3 
+# 3 Merge Sort
+def merge_sort(arr):
+    ''' Returns sorted arr '''
+    # Asymptotic Time Complexity: Always - O(nlog(n))
+    # Auxillary Space Complexity: O(n)
+
+    # Idea: separate into size 1 length arrays and merge 2 togehter, building
+    # up sorted array
+
+
+    def recursive_merge_sort(arr):
+        ''' Internal driver method for merge sort. 
+            Note: Separate firt and then merge
+        '''
+        if len(arr) < 2:
+            return arr
+        else:
+            mid = len(arr) // 2
+
+            left = recursive_merge_sort(arr[:mid])
+            right = recursive_merge_sort(arr[mid:])
+
+            return merge(left, right)
+    
+    def merge(left, right):
+        ''' Internal method that merges two sub-arrays in increasing order '''
+        a = []
+        i = 0
+        j = 0
+        
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                a.append(left[i])
+                i += 1
+            else:
+                a.append(right[j])
+                j += 1
+        while i < len(left):
+            a.append(left[i])
+            i += 1
+        while j < len(right):
+            a.append(right[j])
+            j += 1
+
+        return a
+    
+    return recursive_merge_sort(arr)
+
+
+

@@ -61,8 +61,6 @@ def reverse_binary_search_tree():
     print('Reversed BST:')
     bst.display()
 
-    
+
 if __name__ == "__main__":
-    reverse_binary_search_tree()
-
-
+    pass
