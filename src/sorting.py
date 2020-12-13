@@ -6,14 +6,14 @@ Module contains classic sorting algorithms
 # 1. Insertion Sort
 # 2. Selection Sort
 # 3. Merge Sort 
-# 4. QuickSort TODO
+# 4. QuickSort 
 # 5. Heap Sort TODO
 # 6. Bubble Sort
 
 
 # 1. Insertion Sort
 def insertion_sort(arr):
-    ''' Returns sorted arr '''
+    ''' Returns sorted arr using Insertion Sort'''
     # Asymptotic Time Complexity: Best O(N) [Sorted] Worst O(n^2) [Unsorted] 
     # Auxillary Space Complexity: O(1)
 
@@ -36,7 +36,7 @@ def insertion_sort(arr):
 
 # 2. Selection Sort
 def selection_sort(arr):
-    ''' Returns sorted arr '''
+    ''' Returns sorted arr using Selection Sort'''
     # Asymptotic Time Complexity: Always O(n^2)
     # Auxillary Space Complexity: O(1)
 
@@ -56,7 +56,7 @@ def selection_sort(arr):
 
 # 3 Merge Sort
 def merge_sort(arr):
-    ''' Returns sorted arr '''
+    ''' Returns sorted arr using Merge Sort'''
     # Asymptotic Time Complexity: Always - O(nlog(n))
     # Auxillary Space Complexity: O(n)
 
@@ -104,3 +104,58 @@ def merge_sort(arr):
 
 
 
+# 3 Quick Sort
+def quick_sort(arr):
+    ''' Returns sorted arr using QuickSort'''
+    # Asymptotic Time Complexity: Best - O(nlog(n)) [Simple partition]
+    #                             Worst - O(n^2)    [Inverse sorted] 
+    # Auxillary Space Complexity: O(n)
+
+    # Idea: Initialize pivot and divide into two arrays left/greater pivot
+    #       Repeat process and merge results
+
+
+    def quick_sort_recusrive(arr):
+        ''' Recursive implementation of Quick Sort '''
+        if len(arr) < 2:
+            return arr
+        else:
+            pivot = arr[len(arr) -1]
+
+            lower = []
+            higher = []
+            
+            i = 0
+            while i in range(len(arr) - 1):
+                if arr[i] < pivot:
+                    lower.append(arr[i])
+                else:
+                    higher.append(arr[i])
+                i += 1
+            
+            lower_sorted = quick_sort_recusrive(lower)
+            higher_sorted = quick_sort_recusrive(higher)
+
+            return lower_sorted + [pivot] + higher_sorted
+    
+    return quick_sort_recusrive(arr)
+
+
+
+# 4 Heap Sort
+def heap_sort(arr):
+    ''' Returns sorted arr using Heap Sort '''
+    # Asymptotic Time Complexity: Best/Word - O(nlog(n)) [Need to add to Heap 
+    #                                                       n elements]
+    # Auxillary Space Complexity: O(n) - need to store the Heap
+
+    # Idea: Store elemens in a Binary Heap, adding largest element to new array
+
+    # Note: Binary Heap implemented as follows:
+    # Tree with each child is lower than its parent (or equal)
+    # Implementation:
+    #       heap[i] -> parent
+    #       heap[2*i] -> left child
+    #       heap[2*i + 1] -> right child
+
+    # TODO
