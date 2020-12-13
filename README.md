@@ -54,6 +54,11 @@ also provided.
 
 Idea: Select element for current location. Repeat for all n locations.
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/59763234/102013380-17bef280-3d50-11eb-8f09-9a804807745f.png"  width="600"/>
+</p>
+
+
 Time Complexity: O(n^2) for all cases since we need to find the element for
 each location.
 
@@ -64,9 +69,13 @@ Auxillary Space Complexity: O(1) since no extra array is necessary
 Idea: Move down (inserting) element into sorted array, swapping on element-wise
 comparisons.
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/59763234/102013382-18f01f80-3d50-11eb-850b-1ac3a9e469e3.png"  width="600"/>
+</p>
+
 Time Complexity:
 Worst - O(n^2) whenever the list is reversed sorted as we need
-to swao with each element in sorted sub-arrray.
+to swap with each element in sorted sub-arrray.
 Best - O(n) whenever the list is already sorted since no swaps needed.
 
 Auxillary Space Complexity: O(1) since no extra array is necessary
@@ -74,6 +83,10 @@ Auxillary Space Complexity: O(1) since no extra array is necessary
 ### Merge Sort
 
 Idea: Divide array into subarrays, sort them, merge them together
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/59763234/102013383-1a214c80-3d50-11eb-936f-153767deb0e0.png"  width="600"/>
+</p>
 
 Time Complexity: O(nlog(n))for all cases since we have log(N) division levels,
 each of which have to merge the array in a sorted way before considering longer
@@ -86,6 +99,10 @@ length is N.
 
 Idea: Create a pivot. Move everything less/more pivot on left/right pivot.
 Repeat process and combine the results together to form sorted array.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/59763234/102013385-1beb1000-3d50-11eb-8a7d-49041e538769.png"  width="600"/>
+</p>
 
 Time Complexity:
 Best: O(nlog(n)) - when the array is evenly divided - no need
