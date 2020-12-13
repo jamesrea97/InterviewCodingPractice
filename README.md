@@ -1,4 +1,4 @@
-# InterviewCodingPractice
+# Interview Coding Practice
 
 This project contains coding interview practice taken from various sources,
 written in Python.
