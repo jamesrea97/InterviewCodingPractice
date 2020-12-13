@@ -9,6 +9,7 @@ The project is the following topics:
 - Strings under `string.py`
 - Data Structures under `structures.py`
 - Sorting Algorithms under `sorting.py`
+- Miscellaneous code under `misc.py`
 
 ## Running Project
 

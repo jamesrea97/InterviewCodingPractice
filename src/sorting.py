@@ -1,4 +1,5 @@
-''' Module contains classic sorting algorithms
+''' 
+Module contains classic sorting algorithms
 '''
 
 ###### Table of contents ######
